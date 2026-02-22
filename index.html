@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f0e8" />
+    <meta
+      name="description"
+      content="Memory App - Application de mémorisation par répétition espacée"
+    />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect to Google Fonts to save ~120ms DNS + TLS handshake -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Load fonts non-blocking: media="print" trick swaps to all once loaded -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap"
+      />
+    </noscript>
+
+    <title>Memory App</title>
+
+    <!-- Inline critical CSS: body background + font stack so no FOUC -->
+    <style>
+      body {
+        background: #f5f0e8;
+        font-family: 'Nunito', system-ui, sans-serif;
+        margin: 0;
+      }
+      #app {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
