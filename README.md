@@ -25,46 +25,91 @@ Application web progressive (PWA) de mémorisation par répétition espacée, co
 
 ---
 
-## 🚀 Démarrage rapide
+## 🚀 Installation complète
 
 ### Prérequis
 
-- Node.js ≥ 18
-- npm ≥ 9
+Avant de commencer, assure-toi d'avoir installé :
 
-### Installation
+- **Node.js** ≥ 18 → [nodejs.org](https://nodejs.org)
+- **npm** ≥ 9 (inclus avec Node.js)
+- **Git** → [git-scm.com](https://git-scm.com)
+
+Vérifie tes versions :
+
+```bash
+node --version   # doit afficher v18.x ou supérieur
+npm --version    # doit afficher 9.x ou supérieur
+git --version
+```
+
+---
+
+### 1. Cloner le dépôt
+
+```bash
+git clone https://github.com/Starman404/Projet-Memory.git
+```
+
+Puis entre dans le dossier du projet :
+
+```bash
+cd Projet-Memory
+```
+
+---
+
+### 2. Installer les dépendances
 
 ```bash
 npm install
 ```
 
-### Développement
+Cette commande télécharge tous les packages listés dans `package.json` (Vue, Pinia, Vue Router, Vite, Vitest, Playwright…).
+
+---
+
+### 3. Lancer en développement
 
 ```bash
 npm run dev
-# → http://localhost:5173
 ```
 
-### Build de production
+L'application est accessible sur **http://localhost:5173**
+
+Le serveur de développement recharge automatiquement la page à chaque modification de fichier (HMR — Hot Module Replacement).
+
+---
+
+### 4. Build de production
 
 ```bash
 npm run build
-npm run preview
 ```
 
-### Tests
+Génère les fichiers optimisés dans le dossier `dist/`. Pour prévisualiser le build localement :
+
+```bash
+npm run preview
+# → http://localhost:4173
+```
+
+---
+
+### 5. Tests
 
 ```bash
 # Tests unitaires (Vitest)
 npm run test:unit
 
-# Tests en mode watch
+# Tests en mode watch (relance à chaque modification)
 npm run test:unit:watch
 
 # Couverture de code
 npm run test:coverage
 
-# Tests end-to-end (Playwright)
+# Tests end-to-end (Playwright) — nécessite d'abord :
+npx playwright install   # installe les navigateurs Chromium/Firefox/WebKit
 npm run test:e2e
 ```
 
